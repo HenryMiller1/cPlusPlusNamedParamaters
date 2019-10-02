@@ -21,6 +21,6 @@ Make sure it is worth the trade offs
 # Process
 The following things need to be done before this can get anywhere
 
-1. [] Get a list of everything named paramaters can do, list alternatives and why they are better/worse
-1. [] Direction from Evolution working group on what they think is useful
-1. [] Start writing proposals that address the above
+1. [ ] Get a list of everything named paramaters can do, list alternatives and why they are better/worse
+1. [ ] Direction from Evolution working group on what they think is useful
+1. [ ] Start writing proposals that address the above
