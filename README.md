@@ -12,11 +12,15 @@ Note that named parameters is the general proposed solution for these problems, 
 
 # goals
 
+1. Idenfity the reasons users want named paramaters
+1. Identify the reasons named paramaters are not perfect
 1. Make it easier to write clear and correct code
 1. Not change ABI for existing code
-1. Support future expansion
+1. Support future expansion of the langauge
 
 Make sure it is worth the trade offs
+
+Note that named paramaters is presented as a solution, but may not be right right solution. There may be a different solution that is better. Some of problems we are trying to solve might be worth soliving a different way that doesn't have the downsides.
 
 # Process
 The following things need to be done before this can get anywhere
