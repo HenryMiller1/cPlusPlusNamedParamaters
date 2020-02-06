@@ -74,7 +74,7 @@ void func(enum_A first = enum_a_default, enum_B second = enum_b_default);
 func(second = non_default_value);
 ```
 
-Here the user of func wants to use the deault value for the first paramater, but a different value for the second. Currently in C++ this is only possible my looking up the the default value for the first paramter and adding it. By allowing skipping the default values it makes it clear which values are of interest because they are different.
+Here the user of func wants to use the deault value for the first paramater, but a different value for the second. Currently in C++ this is only possible my looking up the the default value for the first paramter and adding it. By allowing skipping the default values it makes it clear which values are of interest because they are different. If the default value for the first changes it will be then be necesicary to find all uses of this function and change them - it isn't clear if this is a good because the new default might be wrong for that particular call, or a bad thing because of all the labor to make a tedious change.
 
 In Python many standard library functions have a long list of paramters with default values, the defaults are generally reasonable but there is often one that is wrong for some particular application. This is controverisal in Python, it is generally agreed that so many paramaters isn't ideal, but the ability to change just the settings you care about is desired.
 
@@ -89,9 +89,18 @@ circle(length_t /* circumference */);
 };
 ```
 
+This is just a variation of some of the other examples above in a different context.
+
 Here the code is not currently valid C++. The common work around is the name constructor idiom. While that works, many are dissatisfied with that for various reasons. Allowing code like the above would eliminate (or reduce the need) for the name constructor idiom.
 
 # overload with the same type
 Example needed.
 
-
+```C++
+class circle {
+public:
+SetSize(length_t /* radius */);
+SetSize(length_t /* diameter */);
+SetSize(length_t /* circumference */);
+};
+```
